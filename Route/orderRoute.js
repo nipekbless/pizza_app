@@ -6,15 +6,15 @@ const orderRouter = express.Router()
 
 const { createOrder, getOrder, getOrders, updateOrder, deleteOrder } = require ("../controller/orderControler")
 
-orderRouter.post("/order", createOrder)
+orderRouter.post("/", createOrder)
 
-orderRouter.get("/order/:orderId", getOrder)
+orderRouter.get("/:orderId", getOrder)
 
 orderRouter.get("/orders", getOrders)
 
-orderRouter.patch("/order/:id", updateOrder)
+orderRouter.patch("/:id", updateOrder)
 
-orderRouter.delete("/order/:id", deleteOrder)
+orderRouter.delete("/:id", deleteOrder)
 
 
 module.exports = orderRouter
